@@ -1,22 +1,34 @@
-# 데이터 배치
+# 데이터 준비 및 실행
 
-원본 데이터는 Git에 포함하지 않습니다. 교육 과정에서 적법하게 확보한 파일을 아래에 두세요. 강의 파일의 이용·배포 범위는 별도로 확인해야 합니다.
+저장소 루트에서 의존성을 설치한 뒤 Jupyter로 각 프로젝트의 노트북을 실행합니다. 로컬 실행용 노트북은 저장소 루트의 `requirements.txt`를 기준으로 데이터 경로를 찾습니다.
 
-## HAR: data/har/
+## 과제1 · 미세먼지
 
-- data01_train.csv: 5,881행 × 563열
-- data01_test.csv: 1,471행 × 563열
-- features.csv: 561행 × 4열
+다음 파일을 `data/dust/`에 배치합니다.
 
-학습·테스트에는 561특성 + subject + Activity가 있습니다. 확보한 두 파일의 결측은 0이며 subject 각21명이 모두 겹칩니다. 데이터 분할 근거와 원래 공개 HAR 자료의 분할을 동일하다고 가정하지 마세요. 기본 노트북의 과거 출력638/798건은 이 파일과 다릅니다.
+- `air_2024.csv`, `air_2025.csv`
+- `weather_2024.csv`, `weather_2025.csv`
 
-## 미세먼지: data/dust/
+팀 코드의 파일 인코딩은 `cp949`입니다. [미세먼지 노트북](../projects/01-pm10-prediction/notebooks/01_pm10_prediction.ipynb)은 전처리 후 생성한 CSV를 모델링 단계에서 읽습니다.
 
-- air_2024.csv / air_2025.csv
-- weather_2024.csv / weather_2025.csv
+데이터 출처: [에어코리아](https://www.airkorea.or.kr/web/pastSearch?pMENU_NO=123), [기상청 ASOS](https://data.kma.go.kr/data/grnd/selectAsosRltmList.do?pgmNo=36)
 
-현재 이 네 파일은 미확보입니다. 교안상 에어코리아 서울 종로구 관측2024년 전체 학습/2025년1~4월 테스트, 기상청 서울 날씨2024년 전체 학습/2025년1~5월 테스트입니다. 원본은 cp949로 읽는 코드입니다. 각 CSV의 열 이름과 시간 표현이 팀 노트북과 맞아야 하며, 최신 사이트에서 새로 받은 데이터로 과거 성능이 재현된다고 보장하지 않습니다.
+## 과제2 · HAR
 
-[에어코리아](https://www.airkorea.or.kr/web/pastSearch?pMENU_NO=123) / [기상청 ASOS](https://data.kma.go.kr/data/grnd/selectAsosRltmList.do?pgmNo=36)
+다음 파일을 `data/har/`에 배치합니다.
 
-노트북은 실행 도중 data 폴더 아래 파생 CSV·pkl·모델 파일을 만들 수 있습니다. .gitignore에서 이를 제외합니다.
+- `data01_train.csv` — 5,881행 × 563열
+- `data01_test.csv` — 1,471행 × 563열
+- `features.csv` — 특성 설명
+
+563열은 센서 특성561개와 `subject`, `Activity`로 구성됩니다. [EDA·모델링 노트북](../projects/02-har-classification/notebooks/)에서 각 단계를 실행합니다.
+
+## 추가 실행 도구
+
+```bash
+python scripts/verify_har_eda.py --data-dir data/har --output results/har_eda_current.json
+```
+
+저장소 정리 시 추가한 Random Forest 기준 모델 실행 도구입니다. 2026-10-28 검증 데이터1,177건에서 정확도97.96%를 기록했습니다. 팀의 단계별 DNN 테스트와는 별도의 실험입니다.
+
+데이터·모델 파일은 Git 추적에서 제외합니다. `requirements.txt`와 `requirements-dl.txt`는 실행용 의존성 목록입니다. 원본 교육 환경의 버전을 고정한 파일은 아닙니다.

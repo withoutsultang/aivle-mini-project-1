@@ -1,0 +1,65 @@
+{
+  "run_date": "2026-10-28",
+  "sklearn_version": "1.8.0",
+  "training_rows": 4704,
+  "validation_rows": 1177,
+  "accuracy": 0.9796091758708582,
+  "confusion_matrix": [
+    [
+      231,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      195,
+      5,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      9,
+      217,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      194,
+      2,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      3,
+      141,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      175
+    ]
+  ],
+  "important_top5": [
+    "tGravityAcc-mean()-X",
+    "angle(X,gravityMean)",
+    "tGravityAcc-max()-X",
+    "tGravityAcc-mean()-Y",
+    "tGravityAcc-max()-Y"
+  ],
+  "scope": "Current EDA RF validation only; not historical hierarchical DNN reproduction"
+}

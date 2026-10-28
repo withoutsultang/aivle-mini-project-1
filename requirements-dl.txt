@@ -1,0 +1,2 @@
+# 당시 TensorFlow 버전은 미확보. 현재 OS/Python과 맞는 버전을 설치하세요.
+tensorflow

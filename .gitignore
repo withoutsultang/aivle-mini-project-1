@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+data/**/*
+!data/**/
+!data/**/.gitkeep
+*.pkl
+*.joblib
+*.keras
+*.h5

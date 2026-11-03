@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="205" viewBox="0 0 760 205" role="img" aria-labelledby="title desc">
+<title id="title">PM10 제외 분석의 변수 중요도 순위</title>
+<desc id="desc">김건우의 분석에서 시정은 1위, 일산화탄소는 2위였다.</desc>
+<rect width="760" height="205" rx="18" fill="#0d1928"/>
+<g font-family="system-ui, sans-serif">
+<text x="28" y="38" fill="#eef5fc" font-size="21" font-weight="700">PM10 제외 분석 · 변수 중요도</text>
+<rect x="28" y="58" width="344" height="92" rx="12" fill="#18334b"/>
+<rect x="388" y="58" width="344" height="92" rx="12" fill="#18334b"/>
+<text x="48" y="89" fill="#8ee8df" font-size="16" font-weight="700">01 · 1위</text>
+<text x="408" y="89" fill="#8ee8df" font-size="16" font-weight="700">02 · 2위</text>
+<text x="48" y="126" fill="#fff" font-size="26" font-weight="700">시정</text>
+<text x="408" y="126" fill="#fff" font-size="26" font-weight="700">CO · 일산화탄소</text>
+<text x="28" y="181" fill="#bacddd" font-size="14">김건우 개인 분석 · 팀 발표에 기록된 순위</text>
+</g>
+</svg>

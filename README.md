@@ -23,6 +23,10 @@
 
 ## 실행
 
+[![HAR RF smoke check](https://github.com/withoutsultang/aivle-mini-project-1/actions/workflows/har-rf-smoke.yml/badge.svg)](https://github.com/withoutsultang/aivle-mini-project-1/actions/workflows/har-rf-smoke.yml)
+
+GitHub Actions에서 합성 센서 데이터로 HAR Random Forest 평가 스크립트를 실행하고, 출력 JSON의 표본 수와 평가 지표를 확인합니다.
+
 ```bash
 python -m venv .venv
 # macOS/Linux: source .venv/bin/activate

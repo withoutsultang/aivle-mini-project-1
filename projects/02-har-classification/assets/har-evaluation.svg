@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="225" viewBox="0 0 760 225" role="img" aria-labelledby="title desc">
+<title id="title">HAR 단계별 모델 테스트 평가</title>
+<desc id="desc">정확도 96.13퍼센트, 1471건 중 1414건 정답. 앉기를 서기로 예측한 사례 37건, 서기를 앉기로 예측한 사례 9건.</desc>
+<rect width="760" height="225" rx="18" fill="#0d1928"/>
+<g font-family="system-ui, sans-serif">
+<text x="28" y="39" fill="#eef5fc" font-size="21" font-weight="700">단계별 HAR 모델 · 테스트 평가</text>
+<text x="28" y="103" fill="#8ee8df" font-size="46" font-weight="700">96.13%</text>
+<text x="28" y="136" fill="#eef5fc" font-size="18">1,414 / 1,471건 정답</text>
+<rect x="310" y="60" width="422" height="112" rx="12" fill="#18334b"/>
+<text x="331" y="87" fill="#bacddd" font-size="15">혼동행렬 발췌 · 실제 → 예측</text>
+<text x="331" y="119" fill="#fff" font-size="18">앉기 → 서기</text>
+<text x="709" y="119" text-anchor="end" fill="#8ee8df" font-size="18" font-weight="700">37건</text>
+<text x="331" y="151" fill="#fff" font-size="18">서기 → 앉기</text>
+<text x="709" y="151" text-anchor="end" fill="#8ee8df" font-size="18" font-weight="700">9건</text>
+<text x="28" y="201" fill="#bacddd" font-size="14">팀 모델링 노트북에 저장된 테스트 출력</text>
+</g>
+</svg>
